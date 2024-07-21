@@ -201,7 +201,20 @@ int getGrayCode(int n){
 ## maths
 to check if n is :<br>
 divisible by 8 : last 3 digits of n is forming a number which is divisible by 8
-
+#### Fast Exponention
+> To calculate n ^ p % M
+```C++
+int power_modulo(int n, int p, int M) {
+    int result = 1;
+    while (p > 0) {
+        if (p % 2 == 1)
+            result = (result*n) % M;
+        p /= 2;
+        n = (n*n) % M;
+    }
+    return result;
+}
+```
 ## goniometry
 the length between (x1,y1) and (x2,y2) is :
 ```cpp
