@@ -71,6 +71,11 @@ fin.close();fout.close();
 ios_base::sync_with_stdio(0);
 cin.tie(0);
 cout.tie(0);
+getline(cin, s);
+```
+### getline
+```cpp
+getline(cin, s);
 ```
 ### printf function
 ```cpp
