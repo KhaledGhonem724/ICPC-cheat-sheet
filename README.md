@@ -132,14 +132,13 @@ value = *upper_bound( v.begin(), v.end(), 3);
 ```
 ## Set & Map
 ```cpp
+// positions are 0 indexed
 set_name.insert(element);
-set_name.insert(iterator position,  element);	// inserts element in position (for unordered set)
-set2.insert(set1.begin(), set1.end());		// inserts all elements in range [begin, end] from set1 into set2
-myset.erase(position);		// dlete element in position (0 indexed)
-myset.erase(pos1, pos2); 	// dlete all elements from pos1 to pos2 inclusive (0 indexed)
-
+set_name.insert(iterator position,  element);	// for unordered set
+set2.insert(set1.begin(), set1.end());	// inserts all elements in range [begin, end]
+myset.erase(position);		// delete element in position 
+myset.erase(pos1, pos2);	// delete all elements from pos1 to pos2 inclusive
 auto it = set_name.find(num);	// with maps num => the key
-set_name.emplace(value); 	// The value is added to the set if the set does not contain that element already.
 set2_name.swap(set2_name); 	// O(1)
 set_name.count(element); 	// O(log n)
 ```
