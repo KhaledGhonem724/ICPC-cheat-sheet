@@ -1,6 +1,5 @@
 # PUA ECPC 2023 cheat sheet 
 ## Content
-- [libraries](#libraries)
 - [code templates](#code-templates)
 - [input and output](#input-and-output)
 - [important built-in functions](#important-built-in-functions) 
