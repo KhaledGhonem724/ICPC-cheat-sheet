@@ -1,15 +1,4 @@
 # PUA ECPC 2023 cheat sheet 
-## Content
-- [code templates](#code-templates)
-- [input and output](#input-and-output)
-- [important built-in functions](#important-built-in-functions) 
-- [Arrays](#Arrays) 
-- [Set & Map](#Set-&-Map) 
-- [important functions](#important-functions) 
-- [bit manipulation](#bit-manipulation)
-- [maths](#maths)
-- [goniometry](#goniometry) 
-
 ## code templates
 ```cpp
 #include <limits>
