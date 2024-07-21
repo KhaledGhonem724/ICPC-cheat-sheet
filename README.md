@@ -138,6 +138,8 @@ set_name.insert(iterator position,  element);	// for unordered set
 set2.insert(set1.begin(), set1.end());	// inserts all elements in range [begin, end]
 myset.erase(position);		// delete element in position 
 myset.erase(pos1, pos2);	// delete all elements from pos1 to pos2 inclusive
+myset.erase(key);		// in maps
+// returns 1 if the key element is found in the map else returns 0. 
 auto it = set_name.find(num);	// with maps num => the key
 set2_name.swap(set2_name); 	// O(1)
 set_name.count(element); 	// O(log n)
