@@ -179,8 +179,6 @@ vector<bool> sieve(ll n){
 }
 
 ```
-![image](https://github.com/user-attachments/assets/c37ebce3-b779-4062-b55a-21338482976c)
-
 ## bit manipulation
 ### count bits
 ```cpp
