@@ -165,6 +165,22 @@ int LCM(int a, int b)
     return (a / GCD(a, b)) * b;
 }
 ```
+### sieve
+get all primes from 1 to n.
+```cpp
+vector<bool> sieve(ll n){
+ 	vector<bool>isPrime(n+1,true);
+ 	isPrime[0]=isPrime[1]=false;
+ 	for(ll i=2; i*i<=n; i++)
+   		if(isPrime[i])
+     			for(ll j=i*i; j<=n; j+=i)
+       				isPrime[j]=false;
+ 	return isPrime;
+}
+
+```
+![image](https://github.com/user-attachments/assets/c37ebce3-b779-4062-b55a-21338482976c)
+
 ## bit manipulation
 ### count bits
 ```cpp
