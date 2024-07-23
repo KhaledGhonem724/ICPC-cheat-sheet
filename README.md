@@ -177,7 +177,22 @@ vector<bool> sieve(ll n){
        				isPrime[j]=false;
  	return isPrime;
 }
-
+```
+### get all prime factors
+Time Complexity: O(sqrt(N)) 
+```cpp
+vector<int> getPrimeFactors(int n){ 
+    vector<int> primeFactors; 
+    for(int i = 2; i <= n; i++){
+        if(n % i == 0){
+            primeFactors.push_back(i);
+        }
+        while(n % i == 0){
+            n = n / i;
+        }
+    }
+    return primeFactors; 
+}
 ```
 ## bit manipulation
 ### count bits
