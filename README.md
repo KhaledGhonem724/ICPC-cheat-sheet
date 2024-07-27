@@ -1,4 +1,4 @@
-# PUA ECPC 2023 cheat sheet 
+# PUA ECPC 2024 cheat sheet 
 ## Content
 - [code templates](#code-templates)
 - [input and output](#input-and-output)
@@ -9,7 +9,7 @@
 - [bit manipulation](#bit-manipulation)
 - [maths](#maths)
 - [goniometry](#goniometry)
-
+- [structures](#structures)
 ## code templates
 ```cpp
 #include <limits>
@@ -249,3 +249,46 @@ the length between (x1,y1) and (x2,y2) is :
 ```cpp
 double len = sqrt( pow(x2-x1 , 2) + pow(y2-y1 , 2) ); 
 ```
+## structures
+Trie
+```cpp
+class TrieNode {
+public:
+    TrieNode *child[26];
+    bool isWord;
+    TrieNode() {
+        isWord = false;
+        for (auto &a : child) a = nullptr;
+    }
+};
+class Trie {
+    TrieNode* root;
+public:
+    Trie() {
+        root = new TrieNode();
+    }
+    void insert(string s) {
+        TrieNode *p = root;
+        for (auto &c : s) {
+            int i = c - 'a';
+            if (!p->child[i]) p->child[i] = new TrieNode();
+            p = p->child[i];
+        }
+        p->isWord = true;
+    }
+    bool search(string s, bool prefix=false) {
+        TrieNode *p = root;
+        for (auto &c : s) {
+            int i = c - 'a';
+            if (!p->child[i]) return false;
+            p = p->child[i];
+        }
+        if (prefix==false) return p->isWord;
+        return true;
+    }
+    bool startsWith(string prefix) {
+        return search(prefix, true);
+    }
+};
+```
+
