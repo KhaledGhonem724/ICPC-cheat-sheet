@@ -12,6 +12,8 @@
 - [structures](#structures)
 ## code templates
 ```cpp
+#include <bits/stdc++.h>
+
 #include <limits>
 #include <iomanip>
 #include <cstdlib>
