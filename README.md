@@ -294,4 +294,7 @@ public:
     }
 };
 ```
-
+MinHeap (heap which keep record of the smallest element)
+```cpp
+priority_queue<int, vector<int>,greater<int>> mnHeap;
+```
